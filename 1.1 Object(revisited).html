@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Object (revisited)</title>
+  </head>
+  <body>
+    <h1>Object (revisited)</h1>
+
+    <script>
+      // Beberapa metode membuat object di javascript
+
+      // Object Literal
+      const siswa = {
+        nama: "Muhammad Fadhil Alvan Syah",
+        energi: 20,
+        makan: function (porsi) {
+          this.energi = this.energi + porsi;
+          console.log(
+            `Halo ${this.nama}, energi anda bertambah menjadi ${this.energi}`
+          );
+        },
+      };
+
+      // Function declaration
+      function Siswa1(nama, energi) {
+        const gameSederhana = {};
+        gameSederhana.nama = nama;
+        gameSederhana.energi = energi;
+
+        gameSederhana.makan = function (porsi) {
+          this.energi += porsi;
+          console.log(
+            `Halo ${this.nama}, energi anda sudah bertambah menjadi ${this.energi}`
+          );
+        };
+
+        return gameSederhana;
+      }
+
+      let Fadhil = Siswa1("Fadhil", 20);
+    </script>
+  </body>
+</html>
